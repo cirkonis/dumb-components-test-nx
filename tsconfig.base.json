@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dumb-components-test/shared-design-components-test-1": [
+        "libs/shared-design-components-test-1/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

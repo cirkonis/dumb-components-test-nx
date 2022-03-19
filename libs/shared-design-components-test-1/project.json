@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared-design-components-test-1",
+  "sourceRoot": "libs/shared-design-components-test-1/src",
+  "prefix": "dumb-components-test",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared-design-components-test-1"],
+      "options": {
+        "jestConfig": "libs/shared-design-components-test-1/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared-design-components-test-1/src/**/*.ts",
+          "libs/shared-design-components-test-1/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
