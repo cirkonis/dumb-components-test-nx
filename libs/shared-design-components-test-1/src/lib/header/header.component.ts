@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'dumb-components-test-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  template: `
+    <header class="px-xl py-md bg-primary-light text-xl font-bold shadow-md">
+      Angular + Tailwind CSS + Nx
+    </header>`,
 })
-export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class HeaderComponent {}
