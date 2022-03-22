@@ -3,6 +3,7 @@
   "projects": {
     "design-components": "apps/design-components",
     "design-components-e2e": "apps/design-components-e2e",
-    "shared-design-components-test": "libs/shared-design-components-test-1"
+    "shared-design-components-test": "libs/shared-design-components-test-1",
+    "tailwind-preset": "libs/tailwind-preset"
   }
 }
