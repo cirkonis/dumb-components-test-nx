@@ -1,0 +1,9 @@
+export enum ETDSValueTypes {
+  SHORT_TEXT = "SHORT_TEXT",
+  LONG_TEXT = "LONG_TEXT",
+  NAME = "NAME",
+  EMAIL = "EMAIL",
+  BUTTON = "BUTTON",
+  NUMBER = "NUMBER",
+  ICON_ACTION = "ICON_ACTION",
+}
