@@ -5,6 +5,8 @@
     "app2-e2e": "apps/app2-e2e",
     "design-components": "apps/design-components",
     "design-components-e2e": "apps/design-components-e2e",
+    "enums": "libs/enums",
+    "interfaces": "libs/interfaces",
     "shared-design-components-test": "libs/shared-design-components-test-1",
     "tailwind-preset": "libs/tailwind-preset"
   }

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/interfaces",
+  "sourceRoot": "libs/interfaces/src",
+  "prefix": "dumb-components-test",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/interfaces"],
+      "options": {
+        "jestConfig": "libs/interfaces/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/interfaces/src/**/*.ts",
+          "libs/interfaces/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

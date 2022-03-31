@@ -15,6 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@dumb-components-test/enums": ["libs/enums/src/index.ts"],
+      "@dumb-components-test/interfaces": ["libs/interfaces/src/index.ts"],
       "@dumb-components-test/shared-design-components-test-1": [
         "libs/shared-design-components-test-1/src/index.ts"
       ]
