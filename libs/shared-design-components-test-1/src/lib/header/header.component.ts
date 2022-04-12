@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
   selector: 'dumb-components-test-header',
   template: `
     <header class="px-xl py-md bg-primary-light text-xl font-bold shadow-md">
-      Angular + Tailwind CSS + Nx
+      <ng-content></ng-content>
     </header>`,
 })
 export class HeaderComponent {}

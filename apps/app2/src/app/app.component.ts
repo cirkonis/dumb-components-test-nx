@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WindowUtil } from '../../../../libs/utils/src/lib/basic-utils/window.util';
 
 @Component({
   selector: 'dumb-components-test-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app2';
+
+  window = new WindowUtil();
+
 }
