@@ -20,6 +20,40 @@
           "libs/shared-design-components-test-1/src/**/*.html"
         ]
       }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/shared-design-components-test-1/.storybook"
+        },
+        "projectBuildConfig": "shared-design-components-test:build-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "styles": ["libs/shared-design-components-test-1/src/styles.css"],
+        "uiFramework": "@storybook/angular",
+        "outputPath": "dist/storybook/shared-design-components-test",
+        "config": {
+          "configFolder": "libs/shared-design-components-test-1/.storybook"
+        },
+        "projectBuildConfig": "shared-design-components-test:build-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
     }
   },
   "tags": []

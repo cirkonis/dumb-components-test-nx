@@ -8,6 +8,7 @@
     "enums": "libs/enums",
     "interfaces": "libs/interfaces",
     "shared-design-components-test": "libs/shared-design-components-test-1",
+    "shared-design-components-test-e2e": "apps/shared-design-components-test-e2e",
     "tailwind-preset": "libs/tailwind-preset",
     "utils": "libs/utils"
   }
