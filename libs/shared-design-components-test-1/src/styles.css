@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --primary-light: #a5b4fc;
+  --primary: #d00025;
+  --primary-dark: #ffcc00;
+  --secondary-light: #e9d5ff;
+  --secondary: #f75593;
+  --secondary-dark: #7e22ce;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Spacing */
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}

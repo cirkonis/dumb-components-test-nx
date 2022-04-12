@@ -13,7 +13,7 @@ import { Component, Input } from '@angular/core';
             border-transparent
             text-sm
             font-medium
-            rounded-sm
+            rounded-lg
             shadow-sm
             text-white
             bg-primary-dark
@@ -22,10 +22,11 @@ import { Component, Input } from '@angular/core';
             focus:ring-2
             focus:ring-offset-2
             focus:bg-primary-light'>
+      {{label}}
       <ng-content></ng-content>
     </button>
   `
 })
 export class ButtonPrimaryComponent {
-  @Input() click?: Function;
+  @Input() label?: string;
 }
