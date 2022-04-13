@@ -3,18 +3,23 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { CardComponent } from './card/card.component';
 import { ButtonPrimaryComponent } from './buttons/button-primary/button-primary.component';
+import { GenericTableComponent } from './tables/generic-table/generic-table.component';
+
+import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, CdkTableModule],
   declarations: [
     HeaderComponent,
     CardComponent,
-    ButtonPrimaryComponent
+    ButtonPrimaryComponent,
+    GenericTableComponent
   ],
   exports: [
     HeaderComponent,
     CardComponent,
-    ButtonPrimaryComponent
+    ButtonPrimaryComponent,
+    GenericTableComponent
   ],
 })
 export class SharedDesignComponentsTestModule {}

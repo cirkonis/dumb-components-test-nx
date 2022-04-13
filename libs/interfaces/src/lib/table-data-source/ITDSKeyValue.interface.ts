@@ -1,5 +1,5 @@
-import { ITDSCellObject } from './ITDSCellObject.interface';
+import { ITDSColumnObject } from './ITDSCellObject.interface';
 
 export interface ITDSKeyValue {
-  [key: string] : ITDSCellObject
+  [key: string] : ITDSColumnObject
 }
