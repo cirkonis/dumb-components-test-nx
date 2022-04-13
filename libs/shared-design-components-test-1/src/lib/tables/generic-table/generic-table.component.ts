@@ -4,9 +4,13 @@ import { ITDSColumnObject } from '../../../../../interfaces/src/lib/table-data-s
 @Component({
   selector: 'dumb-components-test-generic-table',
   template: `
-    <table cdk-table [dataSource]='dataSource'>
+    <table
+      class='bg-white flex-1 w-auto'
+      cdk-table [dataSource]='dataSource'>
       <!-- Header and Row Declarations -->
-      <tr cdk-header-row *cdkHeaderRowDef='displayedColumns'></tr>
+      <tr
+        class='bg-secondary-light'
+        cdk-header-row *cdkHeaderRowDef='displayedColumns'></tr>
       <tr cdk-row *cdkRowDef='let row; columns: displayedColumns'></tr>
 
       <ng-container *ngFor='let column of columnObjects;let i = index' cdkColumnDef='{{column.columnDef}}'>
@@ -19,7 +23,7 @@ import { ITDSColumnObject } from '../../../../../interfaces/src/lib/table-data-s
 export class GenericTableComponent implements OnInit{
   @Input() dataSource!: any[];
   @Input() columnObjects!: ITDSColumnObject[];
-  displayedColumns: string[] = [];
+  @Input() displayedColumns: string[] = [];
 
   ngOnInit(): void {
     this.displayedColumns = this.columnObjects.map(c => c.columnDef);

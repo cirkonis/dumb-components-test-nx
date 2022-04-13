@@ -49,6 +49,7 @@ export class SpecificTableComponent {
     { columnDef: 'symbol',   header: 'Symbol', cell: (row: Element) => `${row.symbol}`, type:  ETDSValueTypes.SHORT_TEXT   },
   ];
 
+  displayedColumns = this.columns.map(c => c.columnDef);
   // next would be connecting this to a proper data source instead of an array but thats not the buggest deal now.
 
   // also implement a practice mapping function (for columns and the datasource if needed)to make sure this is possible
