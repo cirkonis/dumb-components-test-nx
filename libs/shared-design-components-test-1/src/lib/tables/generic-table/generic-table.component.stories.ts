@@ -1,9 +1,15 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { GenericTableComponent } from './generic-table.component';
-import { Element } from '../../../../../../apps/app2/src/app/components/specific-table/specific-table.component';
 import { ETDSValueTypes } from '../../../../../enums/src/lib/table-data-source/ETDSValueTypes.enum';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
+
+export interface Element {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+}
 
 export default {
   title: 'GenericTableComponent',
