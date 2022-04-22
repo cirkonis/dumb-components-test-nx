@@ -12,8 +12,9 @@ export interface Element {
 
 @Component({
   selector: 'dumb-components-test-specific-table',
-  templateUrl: './specific-table.component.html',
-  styleUrls: ['./specific-table.component.css']
+  template: `
+    <dumb-components-test-generic-table [dataSource]='data' [columnObjects]='columns' [displayedColumns]='displayedColumns'></dumb-components-test-generic-table>
+  `,
 })
 
 export class SpecificTableComponent {
@@ -50,7 +51,6 @@ export class SpecificTableComponent {
   ];
 
   displayedColumns = this.columns.map(c => c.columnDef);
-  // next would be connecting this to a proper data source instead of an array but thats not the buggest deal now.
+  // next would be connecting this to a proper data source instead of an array but thats not the biggest deal now.
 
-  // also implement a practice mapping function (for columns and the datasource if needed)to make sure this is possible
 }

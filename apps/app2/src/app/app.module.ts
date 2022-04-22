@@ -4,9 +4,10 @@ import { SharedDesignComponentsTestModule } from '@dumb-components-test/shared-d
 
 import { AppComponent } from './app.component';
 import { SpecificTableComponent } from './components/specific-table/specific-table.component';
+import { AnotherSpecificTableComponent } from './components/another-specific-table/another-specific-table.component';
 
 @NgModule({
-  declarations: [AppComponent, SpecificTableComponent],
+  declarations: [AppComponent, SpecificTableComponent, AnotherSpecificTableComponent],
   imports: [BrowserModule, SharedDesignComponentsTestModule],
   providers: [],
   bootstrap: [AppComponent],
