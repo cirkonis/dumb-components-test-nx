@@ -7,6 +7,7 @@ import {Component, Input} from '@angular/core';
       <div class="pb-md text-lg font-bold">{{ title }}</div>
       <p class="mb-xl flex-1">
         <ng-content select='[text]'></ng-content>
+        {{ text }}
       </p>
         <div class="flex self-end">
           <ng-content select='[action]'></ng-content>
@@ -15,4 +16,5 @@ import {Component, Input} from '@angular/core';
 })
 export class CardComponent {
   @Input() title?: string;
+  @Input() text?: string;
 }

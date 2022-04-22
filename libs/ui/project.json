@@ -1,14 +1,14 @@
 {
   "projectType": "library",
-  "root": "libs/shared-design-components-test-1",
-  "sourceRoot": "libs/shared-design-components-test-1/src",
+  "root": "libs/ui",
+  "sourceRoot": "libs/ui/src",
   "prefix": "dumb-components-test",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared-design-components-test-1"],
+      "outputs": ["coverage/libs/ui"],
       "options": {
-        "jestConfig": "libs/shared-design-components-test-1/jest.config.js",
+        "jestConfig": "libs/ui/jest.config.js",
         "passWithNoTests": true
       }
     },
@@ -16,8 +16,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/shared-design-components-test-1/src/**/*.ts",
-          "libs/shared-design-components-test-1/src/**/*.html"
+          "libs/ui/src/**/*.ts",
+          "libs/ui/src/**/*.html"
         ]
       }
     },
@@ -27,9 +27,9 @@
         "uiFramework": "@storybook/angular",
         "port": 4400,
         "config": {
-          "configFolder": "libs/shared-design-components-test-1/.storybook"
+          "configFolder": "libs/ui/.storybook"
         },
-        "projectBuildConfig": "shared-design-components-test:build-storybook"
+        "projectBuildConfig": "ui:build-storybook"
       },
       "configurations": {
         "ci": {
@@ -41,13 +41,13 @@
       "executor": "@nrwl/storybook:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "styles": ["libs/shared-design-components-test-1/src/styles.css"],
+        "styles": ["libs/ui/src/styles.css"],
         "uiFramework": "@storybook/angular",
-        "outputPath": "dist/storybook/shared-design-components-test",
+        "outputPath": "dist/storybook/ui",
         "config": {
-          "configFolder": "libs/shared-design-components-test-1/.storybook"
+          "configFolder": "libs/ui/.storybook"
         },
-        "projectBuildConfig": "shared-design-components-test:build-storybook"
+        "projectBuildConfig": "ui:build-storybook"
       },
       "configurations": {
         "ci": {
