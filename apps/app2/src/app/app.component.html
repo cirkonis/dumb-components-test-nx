@@ -1,24 +1,36 @@
-<div class="font-mono">
+<div class='font-mono'>
   <dumb-components-test-header>
     App 2 Header
   </dumb-components-test-header>
 
-  <main class="max-w-xl md:max-w-2xl lg:max-w-6xl mx-auto py-xl px-md md:px-xl grid grid-cols-1 gap-md md:grid-cols-2 lg:grid-cols-3">
+  <main
+    class='max-w-xl md:max-w-2xl lg:max-w-6xl mx-auto py-xl px-md md:px-xl grid grid-cols-1 gap-md md:grid-cols-2 lg:grid-cols-3'>
 
-    <dumb-components-test-card title="Angular" url="https://angular.io/" buttonText='Show Ng2'>
-      <p text>Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.</p>
-      <dumb-components-test-button-primary action (click)='window.openInNewTab("https://angular.io/")'>Show Ng2</dumb-components-test-button-primary>
+    <dumb-components-test-card title='Angular' url='https://angular.io/' buttonText='Show Ng2'>
+      <p text>Angular is an application design framework and development platform for creating efficient and
+        sophisticated single-page apps.</p>
+      <dumb-components-test-button-primary action (click)='window.openInNewTab("https://angular.io/")'>Show Ng2
+      </dumb-components-test-button-primary>
     </dumb-components-test-card>
 
-    <dumb-components-test-card title="Tailwind CSS" url="https://tailwindcss.com/" buttonText='Show Tx2'>
-      <p text>Tailwind CSS is a utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.</p>
-      <dumb-components-test-button-primary action (click)='window.openInNewTab("https://tailwindcss.com/")'>Show Tx2</dumb-components-test-button-primary>
+    <dumb-components-test-card title='Tailwind CSS' url='https://tailwindcss.com/' buttonText='Show Tx2'>
+      <p text>Tailwind CSS is a utility-first CSS framework packed with classes like flex, pt-4, text-center and
+        rotate-90 that can be composed to build any design, directly in your markup.</p>
+      <dumb-components-test-button-primary action (click)='window.openInNewTab("https://tailwindcss.com/")'>Show Tx2
+      </dumb-components-test-button-primary>
     </dumb-components-test-card>
 
-    <dumb-components-test-card title="Nx" url="https://nx.dev/" buttonText='Show Nx2'>
-      <p text>Nx is a smart, fast and extensible build system with first class monorepo support and powerful integrations.</p>
-      <dumb-components-test-button-primary action (click)='window.openInNewTab("https://nx.dev/")'>Show Nx2</dumb-components-test-button-primary>
+    <dumb-components-test-card title='Nx' url='https://nx.dev/' buttonText='Show Nx2'>
+      <p text>Nx is a smart, fast and extensible build system with first class monorepo support and powerful
+        integrations.</p>
+      <dumb-components-test-button-primary action (click)='window.openInNewTab("https://nx.dev/")'>Show Nx2
+      </dumb-components-test-button-primary>
     </dumb-components-test-card>
-
   </main>
+  <div class='max-w-xl md:max-w-2xl lg:max-w-6xl mx-auto py-xl px-md md:px-xl'>
+    <div class='m-sm'>Dranks</div>
+    <dumb-components-test-another-specific-table></dumb-components-test-another-specific-table>
+    <div class='m-md'>Science</div>
+    <dumb-components-test-specific-table></dumb-components-test-specific-table>
+  </div>
 </div>

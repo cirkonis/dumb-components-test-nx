@@ -16,6 +16,7 @@ const Template: Story<HeaderComponent> = (args: HeaderComponent) => ({
 });
 
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Header = Template.bind({});
+Header.args = {
+  header: "Change Me"
 }
