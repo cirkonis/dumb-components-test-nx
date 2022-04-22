@@ -22,4 +22,4 @@ import { CdkTableModule } from '@angular/cdk/table';
     GenericTableComponent
   ],
 })
-export class SharedDesignComponentsTestModule {}
+export class UiModule {}
