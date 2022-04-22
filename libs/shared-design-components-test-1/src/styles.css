@@ -4,12 +4,12 @@
 
 :root {
   /* Colors */
-  --primary-light: #a5b4fc;
-  --primary: #d00025;
-  --primary-dark: #ffcc00;
-  --secondary-light: #e9d5ff;
-  --secondary: #f75593;
-  --secondary-dark: #7e22ce;
+  --primary-light: #f8b865;
+  --primary: #ff9000;
+  --primary-dark: #9d5901;
+  --secondary-light: #fae79b;
+  --secondary: #f3ca23;
+  --secondary-dark: #ad8e13;
   --white: #ffffff;
   --black: #000000;
 
