@@ -43,8 +43,8 @@ export class SpecificTableComponent {
   // the mapping has to be done to define dynamic columns for the table
 
   columns: ITDSColumnObject[] = [
-    { columnDef: 'position', header: 'No.',    cell: (row: Element) => `${row.position}`, type: ETDSValueTypes.SHORT_TEXT },
-    { columnDef: 'name',     header: 'Name',   cell: (row: Element) => `${row.name}`, type: ETDSValueTypes.SHORT_TEXT     },
+    { columnDef: 'position', header: 'No.',    cell: (row: Element) => `${row.position}`, type: ETDSValueTypes.NUMBER },
+    { columnDef: 'name',     header: 'Name',   cell: (row: Element) => `${row.name}`, type: ETDSValueTypes.LONG_TEXT     },
     { columnDef: 'weight',   header: 'Weight', cell: (row: Element) => `${row.weight}`, type:  ETDSValueTypes.NUMBER   },
     { columnDef: 'symbol',   header: 'Symbol', cell: (row: Element) => `${row.symbol}`, type:  ETDSValueTypes.SHORT_TEXT   },
   ];

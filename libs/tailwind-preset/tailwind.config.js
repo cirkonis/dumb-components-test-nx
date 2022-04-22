@@ -13,6 +13,7 @@ module.exports = {
       },
       white: 'var(--white)',
       black: 'var(--black)',
+      gray: 'var(--gray)',
     },
     spacing: {
       sm: 'var(--spacing-sm)',
