@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { ITDSColumnObject } from '../../../../../../libs/interfaces/src/lib/table-data-source/ITDSCellObject.interface';
 import { ETDSValueTypes } from '../../../../../../libs/enums/src/lib/table-data-source/ETDSValueTypes.enum';
-
-export interface Fruit {
-  name: string,
-  color: string,
-}
+import { IFruit } from '../../../../../../libs/interfaces/src/lib/test-data-interfaces/IFruit';
 
 @Component({
   selector: 'dumb-components-test-fruit-table',
@@ -16,15 +12,15 @@ export interface Fruit {
 })
 
 export class FruitTableComponent {
-  data: Fruit[] = [
+  data: IFruit[] = [
     { name: 'Orange', color: 'Orange' }
 
   ];
 
   // the mapping has to be done to define dynamic columns for the table
   columns: ITDSColumnObject[] = [
-    { columnDef: 'name', header: 'Name', cell: (row: Fruit) => `${row.name}`, type: ETDSValueTypes.SHORT_TEXT },
-    { columnDef: 'color', header: 'Color', cell: (row: Fruit) => `${row.color}`, type: ETDSValueTypes.LONG_TEXT }
+    { columnDef: 'name', header: 'Name', cell: (row: IFruit) => `${row.name}`, type: ETDSValueTypes.SHORT_TEXT },
+    { columnDef: 'color', header: 'Color', cell: (row: IFruit) => `${row.color}`, type: ETDSValueTypes.LONG_TEXT }
   ];
 
   displayedColumns = this.columns.map(c => c.columnDef);

@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
 import { ITDSColumnObject } from '../../../../../../libs/interfaces/src/lib/table-data-source/ITDSCellObject.interface';
 import { ETDSValueTypes } from '../../../../../../libs/enums/src/lib/table-data-source/ETDSValueTypes.enum';
+import { IElement } from '../../../../../../libs/interfaces/src/lib/test-data-interfaces/IElement';
 
-
-export interface Element {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
 
 @Component({
   selector: 'dumb-components-test-specific-table',
@@ -18,7 +12,7 @@ export interface Element {
 })
 
 export class SpecificTableComponent {
-  data: Element[] = [
+  data: IElement[] = [
     {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
     {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
     {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
@@ -44,10 +38,10 @@ export class SpecificTableComponent {
   // the mapping has to be done to define dynamic columns for the table
 
   columns: ITDSColumnObject[] = [
-    { columnDef: 'position', header: 'No.',    cell: (row: Element) => `${row.position}`, type: ETDSValueTypes.NUMBER },
-    { columnDef: 'name',     header: 'Name',   cell: (row: Element) => `${row.name}`, type: ETDSValueTypes.LONG_TEXT     },
-    { columnDef: 'weight',   header: 'Weight', cell: (row: Element) => `${row.weight}`, type:  ETDSValueTypes.NUMBER   },
-    { columnDef: 'symbol',   header: 'Symbol', cell: (row: Element) => `${row.symbol}`, type:  ETDSValueTypes.SHORT_TEXT   },
+    { columnDef: 'position', header: 'No.',    cell: (row: IElement) => `${row.position}`, type: ETDSValueTypes.NUMBER },
+    { columnDef: 'name',     header: 'Name',   cell: (row: IElement) => `${row.name}`, type: ETDSValueTypes.LONG_TEXT     },
+    { columnDef: 'weight',   header: 'Weight', cell: (row: IElement) => `${row.weight}`, type:  ETDSValueTypes.NUMBER   },
+    { columnDef: 'symbol',   header: 'Symbol', cell: (row: IElement) => `${row.symbol}`, type:  ETDSValueTypes.SHORT_TEXT   },
   ];
 
   displayedColumns = this.columns.map(c => c.columnDef);

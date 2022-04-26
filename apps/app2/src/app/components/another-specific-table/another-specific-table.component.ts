@@ -1,20 +1,8 @@
 import { Component } from '@angular/core';
 import { ITDSColumnObject } from '../../../../../../libs/interfaces/src/lib/table-data-source/ITDSCellObject.interface';
 import { ETDSValueTypes } from '../../../../../../libs/enums/src/lib/table-data-source/ETDSValueTypes.enum';
-
-export enum EDrinkTypes {
-  WHISKY='WHISKY',
-  RUM='RUM',
-  VODKA='VODKA',
-  TEQUILA='TEQUILA',
-}
-
-export interface Drink {
-  'name': string,
-  'liquor': EDrinkTypes,
-  'proof': number;
-}
-
+import { IDrink } from '../../../../../../libs/interfaces/src/lib/test-data-interfaces/IDrink';
+import { EDrinkTypes } from '../../../../../../libs/enums/src/lib/test-data-enums/EDrinkTypes';
 
 @Component({
   selector: 'dumb-components-test-another-specific-table',
@@ -23,7 +11,7 @@ export interface Drink {
   `,
 })
 export class AnotherSpecificTableComponent {
-  data: Drink[] = [
+  data: IDrink[] = [
     {name: 'Jim Beam',  liquor: EDrinkTypes.WHISKY, proof: 80},
     {name: 'Jack D.',  liquor: EDrinkTypes.WHISKY, proof: 80},
     {name: 'Buffalo Trace',  liquor: EDrinkTypes.WHISKY, proof: 80},
@@ -44,9 +32,9 @@ export class AnotherSpecificTableComponent {
   // the mapping has to be done to define dynamic columns for the table
 
   columns: ITDSColumnObject[] = [
-    { columnDef: 'name',     header: 'Name',   cell: (row: Drink) => `${row.name}`, type: ETDSValueTypes.LONG_TEXT     },
-    { columnDef: 'liquor',   header: 'Liquor', cell: (row: Drink) => `${row.liquor}`, type:  ETDSValueTypes.SHORT_TEXT   },
-    { columnDef: 'proof',   header: 'Proof', cell: (row: Drink) => `${row.proof}`, type:  ETDSValueTypes.NUMBER   },
+    { columnDef: 'name',     header: 'Name',   cell: (row: IDrink) => `${row.name}`, type: ETDSValueTypes.LONG_TEXT     },
+    { columnDef: 'liquor',   header: 'Liquor', cell: (row: IDrink) => `${row.liquor}`, type:  ETDSValueTypes.SHORT_TEXT   },
+    { columnDef: 'proof',   header: 'Proof', cell: (row: IDrink) => `${row.proof}`, type:  ETDSValueTypes.NUMBER   },
   ];
 
   displayedColumns = this.columns.map(c => c.columnDef);
