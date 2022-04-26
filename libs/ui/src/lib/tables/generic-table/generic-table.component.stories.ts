@@ -3,13 +3,8 @@ import { GenericTableComponent } from './generic-table.component';
 import { ETDSValueTypes } from '../../../../../enums/src/lib/table-data-source/ETDSValueTypes.enum';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
+import { IDrink } from '../../../../../interfaces/src/lib/test-data-interfaces/IDrink';
 
-
-export interface Drink {
-  'name': string,
-  'liquor': string,
-  'proof': number;
-}
 export default {
   title: 'GenericTableComponent',
   component: GenericTableComponent,
@@ -45,9 +40,9 @@ Table.args = {
 ],
 
   columnObjects: [
-  { columnDef: 'name',     header: 'Name',   cell: (row: Drink) => `${row.name}`, type: ETDSValueTypes.LONG_TEXT     },
-  { columnDef: 'liquor',   header: 'Liquor', cell: (row: Drink) => `${row.liquor}`, type:  ETDSValueTypes.SHORT_TEXT   },
-  { columnDef: 'proof',   header: 'Proof', cell: (row: Drink) => `${row.proof}`, type:  ETDSValueTypes.NUMBER   },
+  { columnDef: 'name',     header: 'Name',   cell: (row: IDrink) => `${row.name}`, type: ETDSValueTypes.LONG_TEXT     },
+  { columnDef: 'liquor',   header: 'Liquor', cell: (row: IDrink) => `${row.liquor}`, type:  ETDSValueTypes.SHORT_TEXT   },
+  { columnDef: 'proof',   header: 'Proof', cell: (row: IDrink) => `${row.proof}`, type:  ETDSValueTypes.NUMBER   },
 ],
   displayedColumns: ['name', 'liquor', 'proof'],
 }
